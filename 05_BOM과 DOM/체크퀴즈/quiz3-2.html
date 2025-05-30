@@ -8,6 +8,13 @@
    <body>
       <button id="backButton">이전 페이지로 이동</button>
 
-      <script></script>
+      <script>
+         // 버튼 클릭 시 이전 페이지로 이동
+         const backButton = document.getElementById('backButton')
+
+         backButton.addEventListener('click', () => {
+            history.back()
+         })
+      </script>
    </body>
 </html>

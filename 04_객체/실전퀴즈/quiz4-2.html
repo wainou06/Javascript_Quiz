@@ -14,6 +14,18 @@
             { date: '2023-09-18', temperature: 30, precipitationChance: 80 },
             { date: '2023-09-19', temperature: 26, precipitationChance: 20 },
          ]
+
+         const weatherInFahrenheit = weatherData.map((day) => {
+            return {
+               date: day.date,
+               temperatureF: (day.temperature * 9) / 5 + 32,
+               precipitationChance: day.precipitationChance,
+            }
+         })
+
+         weatherInFahrenheit.forEach((day) => {
+            console.log(`날짜: ${day.date}, 기온: ${day.temperatureF.toFixed(1)}℉`)
+         })
       </script>
    </body>
 </html>

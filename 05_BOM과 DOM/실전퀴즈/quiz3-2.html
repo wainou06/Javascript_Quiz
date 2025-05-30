@@ -129,22 +129,25 @@
          // 컨테이너 요소 가져오기
          const container = document.querySelector('#news-container')
 
-         /*
+         // 신문기사 데이터를 바탕으로 카드 생성 및 추가
+         const articles = newsData.articles
 
-         신문기사 데이터를 바탕으로 카드 생성 및 추가
-         아래와 같은 형태로 #news-container에 추가 된다.
+         articles.forEach((article) => {
+            const card = document.createElement('div')
+            card.className = 'card'
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180" alt="경제 성장률 5년 만에 최고치 기록" />
-            <div class="card-content">
-               <h2>경제 성장률 5년 만에 최고치 기록</h2>
-               <p class="meta">이정민 기자 | 2024-10-08</p>
-               <p>올해 경제 성장률이 5년 만에 최고치를 기록했습니다. 전문가들은 코로나19 이후 경제 회복이 빠르게 진행된 것으로 분석하고 있습니다.</p>
-               <a href="#">기사 읽기</a>
-            </div>
-         </div>
-         
-         */
+            card.innerHTML = `
+                  <img src="${article.img}" alt="${article.title}">
+                  <div class="card-content">
+                     <h2>${article.title}</h2>
+                     <p class="meta">${article.author} | ${article.date}</p>
+                     <p>${article.summary}</p>
+                     <a href="${article.link}">기사 읽기</a>
+                  </div>
+               `
+
+            container.appendChild(card)
+         })
       </script>
    </body>
 </html>

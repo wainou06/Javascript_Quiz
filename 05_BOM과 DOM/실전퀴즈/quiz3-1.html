@@ -13,12 +13,29 @@
       </select>
 
       <script>
-         let currentValue //사용자가 입력한 값을 저장하는 변수
-         let constValue = 10 // select박스에서 선택한 option값의 value를 저장하는 변수 -> select 박스를 선택시 이 변수의 값을 변화시킨다
+         // cm를 여러단위로 변환하는 프로그램
+         let currentValue
+         let constValue = 10
 
          const select = document.querySelector('select')
          const input = document.querySelector('input')
          const span = document.querySelector('span')
+
+         const calculate = () => {
+            span.textContent = (currentValue * constValue).toFixed(2)
+         }
+
+         select.addEventListener('change', (event) => {
+            const options = event.currentTarget.options
+            const index = event.currentTarget.options.selectedIndex
+            constValue = Number(options[index].value)
+            calculate()
+         })
+
+         input.addEventListener('keyup', (event) => {
+            currentValue = Number(event.currentTarget.value)
+            calculate()
+         })
       </script>
    </body>
 </html>

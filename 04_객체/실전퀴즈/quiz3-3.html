@@ -36,6 +36,19 @@
                },
             ],
          }
+
+         const products = data.products
+
+         const discountedProducts = products.map((product) => {
+            return {
+               productName: product.productName,
+               discountedPrice: product.price * 0.9,
+            }
+         })
+
+         discountedProducts.forEach((product) => {
+            console.log(`${product.productName}: ${product.discountedPrice.toLocaleString('ko-KR')}원`)
+         })
       </script>
    </body>
 </html>

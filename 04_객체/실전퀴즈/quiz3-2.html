@@ -36,6 +36,14 @@
                },
             ],
          }
+
+         const products = data.products
+
+         const availableProducts = products
+            .filter((product) => product.inStock)
+            .forEach((product) => {
+               console.log(`${product.productName}: ${product.price.toLocaleString('ko-KR')}원`)
+            })
       </script>
    </body>
 </html>

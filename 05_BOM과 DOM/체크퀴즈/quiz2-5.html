@@ -15,6 +15,14 @@
 
       <div id="result">선택된 과일: apple</div>
 
-      <script></script>
+      <script>
+         const selectElement = document.querySelector('#fruits')
+         const resultDiv = document.querySelector('#result')
+
+         selectElement.addEventListener('change', (event) => {
+            const selectedFruit = event.target.value
+            resultDiv.textContent = `선택된 과일: ${selectedFruit}`
+         })
+      </script>
    </body>
 </html>

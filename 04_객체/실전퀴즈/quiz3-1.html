@@ -36,6 +36,12 @@
                },
             ],
          }
+
+         const user = data.user
+
+         user.hobbies.forEach((hobby, index) => {
+            console.log(`${index + 1}. ${hobby}`)
+         })
       </script>
    </body>
 </html>

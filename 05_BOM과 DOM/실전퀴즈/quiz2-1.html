@@ -43,6 +43,24 @@
          const pw = document.querySelector('#password')
          const idMsg = document.querySelector('.id-msg')
          const pwMsg = document.querySelector('.pw-msg')
+
+         button.addEventListener('click', (e) => {
+            if (!id.value) {
+               //공백일때
+               idMsg.style.display = 'block'
+            } else {
+               //공백 아닐때
+               idMsg.style.display = 'none'
+            }
+
+            if (!pw.value) {
+               //공백일때
+               pwMsg.style.display = 'block'
+            } else {
+               //공백 아닐때
+               pwMsg.style.display = 'none'
+            }
+         })
       </script>
    </body>
 </html>
