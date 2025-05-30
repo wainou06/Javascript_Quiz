@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 배열 안 모든 숫자 제곱해서 새로운 배열에 담아 변환
+
+         const squareArray = (arr) => {
+            const result = []
+
+            for (const num of arr) {
+               result.push(num * num)
+            }
+
+            return result
+         }
+
+         console.log(squareArray([1, 2, 3])) // [1, 4, 9]
+         console.log(squareArray([0, 5])) // [0, 25]
+      </script>
+   </body>
+</html>
