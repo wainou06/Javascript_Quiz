@@ -50,3 +50,5 @@ setInterval(function () {
 
    ctx.lineWidth = lineWidth
 }, 1000 / 60)
+
+// 447.9273061650724

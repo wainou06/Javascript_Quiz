@@ -16,6 +16,7 @@ ctx.lineWidth = lineWidth
 var direction = 1
 
 setInterval(function () {
+   let x // 변수 x가 정의 되어있지 않음
    ctx.beginPath()
    ctx.moveTo(x, y)
 

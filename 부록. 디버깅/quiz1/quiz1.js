@@ -6,3 +6,5 @@ for (let i = 1; i <= 100; i++) {
 }
 
 console.log('합계', sum)
+
+// 5610
